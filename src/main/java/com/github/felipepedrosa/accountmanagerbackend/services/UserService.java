@@ -47,4 +47,9 @@ public class UserService {
             repository.delete(user);
         }
     }
+
+    public User findByEmail(String email) {
+        return repository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+    }
 }

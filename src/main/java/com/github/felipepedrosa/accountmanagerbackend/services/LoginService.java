@@ -3,9 +3,9 @@ package com.github.felipepedrosa.accountmanagerbackend.services;
 import com.github.felipepedrosa.accountmanagerbackend.config.security.SessionDTO;
 import com.github.felipepedrosa.accountmanagerbackend.models.User;
 import com.github.felipepedrosa.accountmanagerbackend.repositories.UserRepository;
-import com.github.felipepedrosa.accountmanagerbackend.utils.JWTUtils;
 import com.github.felipepedrosa.accountmanagerbackend.services.exceptions.AuthenticationException;
 import com.github.felipepedrosa.accountmanagerbackend.services.exceptions.ResourceNotFoundException;
+import com.github.felipepedrosa.accountmanagerbackend.utils.JWTUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,8 @@ public class LoginService {
     private PasswordEncoder encoder;
 
     public SessionDTO login(User user) {
-        User foundUser = repository.findByEmail(user.getEmail()).orElseThrow(ResourceNotFoundException::new);
+        User foundUser = repository.findByEmail(user.getEmail())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
         if (!encoder.matches(user.getPassword(), foundUser.getPassword())) {
             throw new AuthenticationException();

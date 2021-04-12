@@ -1,9 +1,13 @@
 package com.github.felipepedrosa.accountmanagerbackend.utils;
 
 import com.github.felipepedrosa.accountmanagerbackend.config.security.JWTObject;
+import com.github.felipepedrosa.accountmanagerbackend.models.User;
+import com.github.felipepedrosa.accountmanagerbackend.repositories.UserRepository;
+import com.github.felipepedrosa.accountmanagerbackend.services.UserService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.util.Date;
 
@@ -15,6 +19,8 @@ public class JWTUtils {
     public static final String PREFIX = "Bearer ";
     public static final long TOKEN_EXPIRATION = 60 * 60 * 7000;
     public static final String HEADER_AUTHORIZATION = "Authorization";
+
+    private UserRepository userRepository;
 
     /**
      * Creates a new JWT.
@@ -49,5 +55,9 @@ public class JWTUtils {
                 .getBody();
 
         return new JWTObject(claims.getSubject(), claims.getExpiration(), claims.getIssuedAt());
+    }
+
+    public static User getUserFromRequest(UserService service) {
+        return service.findByEmail((String) SecurityContextHolder.getContext().getAuthentication().getPrincipal());
     }
 }

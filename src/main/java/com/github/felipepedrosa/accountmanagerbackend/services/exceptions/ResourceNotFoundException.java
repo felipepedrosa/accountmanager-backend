@@ -6,6 +6,10 @@ package com.github.felipepedrosa.accountmanagerbackend.services.exceptions;
 public class ResourceNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 1515464960557721696L;
 
+    public ResourceNotFoundException(String msg) {
+        super(msg);
+    }
+
     public ResourceNotFoundException() {
         super();
     }
