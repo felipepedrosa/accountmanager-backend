@@ -3,7 +3,7 @@ package com.github.felipepedrosa.accountmanagerbackend.services;
 import com.github.felipepedrosa.accountmanagerbackend.dtos.SessionDTO;
 import com.github.felipepedrosa.accountmanagerbackend.models.User;
 import com.github.felipepedrosa.accountmanagerbackend.repositories.UserRepository;
-import com.github.felipepedrosa.accountmanagerbackend.security.JWTUtils;
+import com.github.felipepedrosa.accountmanagerbackend.utils.JWTUtils;
 import com.github.felipepedrosa.accountmanagerbackend.services.exceptions.AuthenticationException;
 import com.github.felipepedrosa.accountmanagerbackend.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,5 +1,6 @@
-package com.github.felipepedrosa.accountmanagerbackend.security;
+package com.github.felipepedrosa.accountmanagerbackend.utils;
 
+import com.github.felipepedrosa.accountmanagerbackend.security.JWTObject;
 import com.github.felipepedrosa.accountmanagerbackend.utils.StringUtilities;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

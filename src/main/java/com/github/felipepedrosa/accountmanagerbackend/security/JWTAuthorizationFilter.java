@@ -1,5 +1,6 @@
 package com.github.felipepedrosa.accountmanagerbackend.security;
 
+import com.github.felipepedrosa.accountmanagerbackend.utils.JWTUtils;
 import com.github.felipepedrosa.accountmanagerbackend.utils.StringUtilities;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
