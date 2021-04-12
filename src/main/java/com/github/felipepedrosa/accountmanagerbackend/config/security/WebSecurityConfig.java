@@ -1,4 +1,4 @@
-package com.github.felipepedrosa.accountmanagerbackend.security;
+package com.github.felipepedrosa.accountmanagerbackend.config.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

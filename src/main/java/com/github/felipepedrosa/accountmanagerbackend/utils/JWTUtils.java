@@ -1,12 +1,9 @@
 package com.github.felipepedrosa.accountmanagerbackend.utils;
 
-import com.github.felipepedrosa.accountmanagerbackend.security.JWTObject;
-import com.github.felipepedrosa.accountmanagerbackend.utils.StringUtilities;
+import com.github.felipepedrosa.accountmanagerbackend.config.security.JWTObject;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 
 import java.util.Date;
 

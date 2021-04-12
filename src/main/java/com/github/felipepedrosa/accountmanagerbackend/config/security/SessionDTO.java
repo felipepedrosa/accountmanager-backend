@@ -1,4 +1,4 @@
-package com.github.felipepedrosa.accountmanagerbackend.dtos;
+package com.github.felipepedrosa.accountmanagerbackend.config.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

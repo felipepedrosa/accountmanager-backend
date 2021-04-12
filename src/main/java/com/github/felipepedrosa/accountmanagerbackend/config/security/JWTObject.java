@@ -1,8 +1,7 @@
-package com.github.felipepedrosa.accountmanagerbackend.security;
+package com.github.felipepedrosa.accountmanagerbackend.config.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;

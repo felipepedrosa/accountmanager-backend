@@ -1,4 +1,4 @@
-package com.github.felipepedrosa.accountmanagerbackend.security;
+package com.github.felipepedrosa.accountmanagerbackend.config.security;
 
 import com.github.felipepedrosa.accountmanagerbackend.utils.JWTUtils;
 import com.github.felipepedrosa.accountmanagerbackend.utils.StringUtilities;
@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Filter/Middleware used to check user has a valid token in each request.
+ */
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
     /**
      * {@inheritDoc}

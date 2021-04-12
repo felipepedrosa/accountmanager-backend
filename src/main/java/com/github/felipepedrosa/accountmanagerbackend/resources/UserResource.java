@@ -1,6 +1,6 @@
 package com.github.felipepedrosa.accountmanagerbackend.resources;
 
-import com.github.felipepedrosa.accountmanagerbackend.dtos.SessionDTO;
+import com.github.felipepedrosa.accountmanagerbackend.config.security.SessionDTO;
 import com.github.felipepedrosa.accountmanagerbackend.dtos.UserWithoutPasswordDTO;
 import com.github.felipepedrosa.accountmanagerbackend.models.User;
 import com.github.felipepedrosa.accountmanagerbackend.services.LoginService;
